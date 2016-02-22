@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = angular.module('ng-if-bootstrap-grid', [])
+angular.module('ng-if-bootstrap-grid', [])
     .directive('ngIfBootstrapGrid', ['ngIfDirective', '$window', function(ngIfDirective, $window) {
         var ngIf = ngIfDirective[0];
 

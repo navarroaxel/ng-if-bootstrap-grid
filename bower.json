@@ -1,5 +1,5 @@
 {
-  "name": "ng-if-bootstrap-grid",
+  "name": "ng-if-bootstrap",
   "description": "Angular directives, including or excluding HTML-elements, based on currently active Bootstrap grid: xs, sm, md, lg",
   "main": "src/index.js",
   "authors": [
