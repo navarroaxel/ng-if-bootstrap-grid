@@ -27,6 +27,7 @@ angular.module('ng-if-bootstrap-grid', [])
 							'<!-- ng-if-bootstrap-grid-detection-block: -->\
 							<div class="ng-if-bootstrap-grid-detection-block">\
 								<div class="device-xs visible-xs visible-xs-block"></div>\
+								<div class="device-ms visible-ms visible-ms-block"></div>\
 								<div class="device-sm visible-sm visible-sm-block"></div>\
 								<div class="device-md visible-md visible-md-block"></div>\
 								<div class="device-lg visible-lg visible-lg-block"></div>\
@@ -41,6 +42,9 @@ angular.module('ng-if-bootstrap-grid', [])
                             switch (splitArr[i].toLowerCase()) {
                                 case 'xs':
 									render = isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-xs');
+                                    break;
+                                case 'ms':
+                                    render = isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-ms');
                                     break;
                                 case 'sm':
 									render = isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-sm');
@@ -93,6 +97,7 @@ angular.module('ng-if-bootstrap-grid', [])
 		                '<!-- ng-if-bootstrap-grid-detection-block: -->\
 						<div class="ng-if-bootstrap-grid-detection-block">\
 							<div class="device-xs visible-xs visible-xs-block"></div>\
+							<div class="device-ms visible-ms visible-ms-block"></div>\
 							<div class="device-sm visible-sm visible-sm-block"></div>\
 							<div class="device-md visible-md visible-md-block"></div>\
 							<div class="device-lg visible-lg visible-lg-block"></div>\
@@ -108,10 +113,13 @@ angular.module('ng-if-bootstrap-grid', [])
 							case 'xs':
 								render = !isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-xs');
 								break;
-							case 'sm':
-								render = !isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-sm');
+							case 'ms':
+								render = !isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-ms');
 								break;
-							case 'md':
+                            case 'sm':
+                                render = !isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-sm');
+                                break;
+                            case 'md':
 								render = !isDisplayed('.ng-if-bootstrap-grid-detection-block .visible-md');
 								break;
 							case 'lg':
